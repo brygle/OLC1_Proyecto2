@@ -1,0 +1,12 @@
+COMANDOS 
+
+TYPESCRIPT
+
+GO
+/Cliente go run index.go
+
+JIISON
+Servidor/AnalizadorJava jison nombre.jison 
+
+NODE
+Servidor/ node app.js 

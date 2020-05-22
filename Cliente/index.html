@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ejemplo</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <style>
+      html { margin:0; padding:0; font-size:62.5%; }
+      body { max-width:800px; min-width:300px; margin:0 auto; padding:20px 10px; font-size:14px; font-size:1.4em; }
+      h1 { font-size:1.8em; }
+      .demo { overflow:auto; border:1px solid silver; min-height:100px; }
+      </style>
+    <link rel="stylesheet" href="../dist/themes/default/style.min.css" />  
+    <link href="../css/layout.css" rel="stylesheet" type="text/css" media="all">
+    
+    <script src="../js/index2.js"></script>
+  </head>
+  <body>
+
+    <div class="wrapper row3">
+      <main class="container clear">
+        <div class="group" id="div">
+
+          <input type="text" id="izquierdo">
+          <input type="text" id="derecho">
+          <button onclick="Conn()">Calcular</button>
+          
+        </div>
+        <div class="clear"></div>
+      </main>
+    </div>
+
+    <h1>Reporte AST 1</h1>
+    <div id="html" class="demo jstree jstree-1 jstree-default" role="tree" aria-multiselectable="true" tabindex="0" aria-activedescendant="jl_3" aria-busy="false">
+      
+    </div>
+
+    <h1>Reporte AST 2</h1>
+    <div id="htmlDer" class="demo jstree jstree-1 jstree-default" role="tree" aria-multiselectable="true" tabindex="0" aria-activedescendant="jl_3" aria-busy="false">
+      
+    </div>
+
+    <div id="copiaclases"></div>
+    <div id="copiafunciones"></div>
+    <div id="copiavariables"></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="../dist/jstree.min.js"></script>
+
+	<script>
+	$('#html').jstree();
+	</script>
+
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/jquery.backtotop.js"></script>
+    <script src="../js/jquery.mobilemenu.js"></script>
+  </body>
+</html>
