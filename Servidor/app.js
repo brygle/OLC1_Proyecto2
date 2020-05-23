@@ -18,6 +18,7 @@ var listaFunciones;
 var clasePadre;
 var funcionPadre;
 app.post('/Calcular/', function (req, res) {
+    //Errores.clear();
     var izq = req.body.izquierdo;
     var der = req.body.derecho;
     console.log(izq);
@@ -40,7 +41,9 @@ app.post('/Calcular/', function (req, res) {
     funcionPadre = "";
     recorrer(resder);
     lista.push(listaClases);
-    Errores_1.Errores.clear();
+    lista.push(Errores_1.Errores.geterror());
+    console.log(JSON.stringify(Errores_1.Errores));
+    //Errores.clear();
     //res.send(resultado.toString());
     res.send(JSON.stringify(lista));
 });
@@ -66,7 +69,7 @@ function imprimir(raiz) {
     }
 }
 function recorrer(raiz) {
-       
+    console.log(raiz.getTitulo());
     if (raiz.getTitulo() == "DECLARACION") {
         var raizHijos = raiz.getHijos();
         var tipo = raizHijos[0].getHijos()[0].getTitulo();

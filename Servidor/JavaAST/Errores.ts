@@ -19,11 +19,6 @@ class Errores extends Array<NodoError>{
 
     public static geterror():string{
         var cad:string="";
-        cad+="<html>\n";
-            cad+="<header>\n";
-                cad+="<title>Reporte Errores</title>\n";
-            cad+="</header>\n";
-            cad+="<body background=\"gray\">\n";
                 cad+="<div align=\"center\">\n";
                     cad+="<h1>Reporte de Errores de Compilacion</h1>\n";
                     cad+="<table border=\"2\" align=\"center\">\n";
@@ -39,8 +34,6 @@ class Errores extends Array<NodoError>{
                         }
                     cad+="</table>\n";
                 cad+="</div>\n";
-            cad+="</body>\n";
-        cad+="</html>\n";
 
         return cad;
     }

@@ -10,10 +10,18 @@
       h1 { font-size:1.8em; }
       .demo { overflow:auto; border:1px solid silver; min-height:100px; }
       </style>
+      <link rel="stylesheet" type="text/css" href="../css/index.css"/>
+
     <link rel="stylesheet" href="../dist/themes/default/style.min.css" />  
     <link href="../css/layout.css" rel="stylesheet" type="text/css" media="all">
     
     <script src="../js/index2.js"></script>
+    <script src="../js/tabs.js"></script>
+    <script type="text/javascript" src="./jquery-1.7.2.min.js"></script>
+    <script src="../codemirror/lib/codemirror.js"></script>
+    <link rel="stylesheet" href="../codemirror//lib//codemirror.css">
+    <link rel="stylesheet" href="../codemirror//theme//eclipse.css">
+    <script src="../codemirror/mode/clike/clike.js"></script>
   </head>
   <body>
 
@@ -29,6 +37,27 @@
         <div class="clear"></div>
       </main>
     </div>
+    <div class="contenedor">
+      <input id="fileInput" title="Abrir" type="file" size="50" onchange="AbrirArchivo(this.files)" class="btnp">
+      <button onclick="DescargarArchivo();" id="guardar" title="Guardar" class="btnp">Guardar</button>
+      <button onclick="agregar();" title="AgregarPestana" id="btn4" class="btnp">Agregar Pestana</button>
+      <button onclick="quitar();" title="QuitarPestana" id="btn5" class="btnp">Quitar Pestana</button>
+      <button onclick="Conn();" title="Compilar" id="btn5" class="btnp">Compilar</button>
+
+      <div id="pestanas">
+          <ul id=lista>
+          </ul>
+      </div>
+
+      <body>
+          <div id="contenidopestanas">
+          </div>
+      </body>
+      <div>
+          <select name="selectizq" id="selectizq"></select>
+          <select name="selectder" id="selectder"></select>
+      </div>
+  </div>
 
     <h1>Reporte AST 1</h1>
     <div id="html" class="demo jstree jstree-1 jstree-default" role="tree" aria-multiselectable="true" tabindex="0" aria-activedescendant="jl_3" aria-busy="false">
@@ -43,6 +72,7 @@
     <div id="copiaclases"></div>
     <div id="copiafunciones"></div>
     <div id="copiavariables"></div>
+    <div id="erroresreporte"></div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="../dist/jstree.min.js"></script>

@@ -1,9 +1,21 @@
 function Conn(){
 
-    var left = document.getElementById("izquierdo").value;
-    var right = document.getElementById("derecho").value;
-    console.log(left);
-    console.log(right);
+    var selectizq = document.getElementById('selectizq').value;
+    var selectder = document.getElementById('selectder').value;
+
+    //alert(selectizq);
+    //alert(selectder);
+
+    var left = document.getElementById("c"+selectizq).childNodes[1].childNodes[5].childNodes[0].childNodes[0].childNodes[0].childNodes[0].childNodes[4].childNodes[0].childNodes[1].childNodes[0].textContent;
+    var right = document.getElementById("c"+selectder).childNodes[1].childNodes[5].childNodes[0].childNodes[0].childNodes[0].childNodes[0].childNodes[4].childNodes[0].childNodes[1].childNodes[0].textContent;
+    
+    
+    alert(left);
+    alert(right);
+    
+
+    left = document.getElementById("izquierdo").value;
+    right = document.getElementById("derecho").value;
 
     var url='http://localhost:8080/Calcular/';
 
@@ -32,7 +44,10 @@ function Conn(){
             divfunciones.innerHTML = getFuncionesCopia();
             var divvariables = document.getElementById('copiavariables');
             divvariables.innerHTML = getVariablesCopia();
+            console.log(JSON.stringify(lista[4]));
 
+            var diverrores = document.getElementById('erroresreporte');
+            diverrores.innerHTML = JSON.stringify(lista[4]);
         }else{
             alert("Error estado de conexion:"+status);
         }

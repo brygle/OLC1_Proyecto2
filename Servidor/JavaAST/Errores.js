@@ -26,11 +26,6 @@ var Errores = /** @class */ (function (_super) {
     };
     Errores.geterror = function () {
         var cad = "";
-        cad += "<html>\n";
-        cad += "<header>\n";
-        cad += "<title>Reporte Errores</title>\n";
-        cad += "</header>\n";
-        cad += "<body background=\"gray\">\n";
         cad += "<div align=\"center\">\n";
         cad += "<h1>Reporte de Errores de Compilacion</h1>\n";
         cad += "<table border=\"2\" align=\"center\">\n";
@@ -46,8 +41,6 @@ var Errores = /** @class */ (function (_super) {
         }
         cad += "</table>\n";
         cad += "</div>\n";
-        cad += "</body>\n";
-        cad += "</html>\n";
         return cad;
     };
     Errores.clear = function () {

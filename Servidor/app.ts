@@ -3,7 +3,6 @@ import * as cors from "cors";
 import * as bodyParser from "body-parser";
 import * as gramatica from "./AnalizadorJava/GramaticaJava";
 import { Errores } from "./JavaAST/Errores";
-import { Nodo } from "./JavaAST/Nodo";
 import { Variable } from "./JavaAST/Variable";
 import { Clase } from "./JavaAST/Clase";
 import { Funcion } from "./JavaAST/Funcion";
@@ -22,6 +21,7 @@ var funcionPadre: string;
 
 
 app.post('/Calcular/', function (req, res) {
+    //Errores.clear();
     var izq=req.body.izquierdo;
     var der =req.body.derecho;
     console.log(izq);
@@ -47,8 +47,10 @@ app.post('/Calcular/', function (req, res) {
     funcionPadre = "";
     recorrer(resder);
     lista.push(listaClases);
-
-    Errores.clear();
+    
+    lista.push(Errores.geterror());
+    console.log(JSON.stringify(Errores));
+    //Errores.clear();
     //res.send(resultado.toString());
     res.send(JSON.stringify(lista));
 });

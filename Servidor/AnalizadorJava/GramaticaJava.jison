@@ -1037,6 +1037,9 @@ INS: DECLARACION puntocoma          {
                                     }
     | error                         { 
                                         var er = new CNodo.Nodo("ERROR");
+
+                                        CErrores.Errores.add(new CNodoError.NodoError("Sintactico","No se esperaba el token: "+yytext,yylineno));
+
                                         $$ = er;
                                     };
 

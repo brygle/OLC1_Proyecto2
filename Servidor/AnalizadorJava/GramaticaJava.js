@@ -1040,6 +1040,9 @@ break;
 case 97:
  
                                         var er = new CNodo.Nodo("ERROR");
+
+                                        CErrores.Errores.add(new CNodoError.NodoError("Sintactico","No se esperaba el token: "+yytext,yylineno));
+
                                         this.$ = er;
                                     
 break;
