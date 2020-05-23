@@ -18,7 +18,7 @@ var listaFunciones;
 var clasePadre;
 var funcionPadre;
 app.post('/Calcular/', function (req, res) {
-    //Errores.clear();
+    Errores_1.Errores.clear();
     var izq = req.body.izquierdo;
     var der = req.body.derecho;
     console.log(izq);

@@ -21,7 +21,7 @@ var funcionPadre: string;
 
 
 app.post('/Calcular/', function (req, res) {
-    //Errores.clear();
+    Errores.clear();
     var izq=req.body.izquierdo;
     var der =req.body.derecho;
     console.log(izq);

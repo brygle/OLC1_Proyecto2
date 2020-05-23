@@ -249,6 +249,18 @@ function DescargarArchivoErrores(){
 }
 
 function CargarIzquierdo(){
-    
+    var ta=document.getElementById(get_vent());
+    var contenido=ta.value;//texto de vent actual
+    alert(contenido);
+    var izq = document.getElementById("izquierdo");
+    izq.value = contenido;
 }
 
+
+function CargarDerecho(){
+    var ta=document.getElementById(get_vent());
+    var contenido=ta.value;//texto de vent actual
+    alert(contenido);
+    var der = document.getElementById("derecho");
+    der.value = contenido;
+}
